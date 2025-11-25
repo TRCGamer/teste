@@ -87,3 +87,6 @@ lint/tmp/
 # Android Profiling
 *.hprof
 nul
+
+# Icon generation script
+generate_icons.py
