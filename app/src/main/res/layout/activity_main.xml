@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro de Ponto"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCurrentLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Localização: Aguardando GPS..."
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentLocation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEntrada"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="ENTRADA"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:icon="@android:drawable/ic_menu_mylocation"
+                app:iconGravity="textStart"
+                app:iconSize="32dp"
+                style="@style/Widget.Material3.Button.Icon" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaida"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:text="SAÍDA"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:icon="@android:drawable/ic_menu_mylocation"
+                app:iconGravity="textStart"
+                app:iconSize="32dp"
+                style="@style/Widget.Material3.Button.TonalButton.Icon" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvLastRecord"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Último registro: Nenhum"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardButtons" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnExportar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Exportar para XLSX"
+        android:layout_marginTop="24dp"
+        app:icon="@android:drawable/ic_menu_save"
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLastRecord" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRegistros"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnExportar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
