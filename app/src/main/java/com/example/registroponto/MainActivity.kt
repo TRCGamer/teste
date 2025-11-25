@@ -91,6 +91,11 @@ class MainActivity : AppCompatActivity() {
             registrarPonto(TipoRegistro.SAIDA)
         }
 
+        binding.btnRelatorio.setOnClickListener {
+            val intent = Intent(this, RelatorioActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnExportar.setOnClickListener {
             exportarParaXLSX()
         }

@@ -41,6 +41,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".RelatorioActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
         <!-- FileProvider para compartilhar arquivos XLSX -->
         <provider
             android:name="androidx.core.content.FileProvider"

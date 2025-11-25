@@ -90,16 +90,28 @@
         app:layout_constraintTop_toBottomOf="@id/cardButtons" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRelatorio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ver Relatório"
+        android:layout_marginTop="24dp"
+        app:icon="@android:drawable/ic_menu_view"
+        style="@style/Widget.Material3.Button.Icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLastRecord" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnExportar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Exportar para XLSX"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         app:icon="@android:drawable/ic_menu_save"
         style="@style/Widget.Material3.Button.OutlinedButton.Icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvLastRecord" />
+        app:layout_constraintTop_toBottomOf="@id/btnRelatorio" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRegistros"
